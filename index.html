@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>index.HTML</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Kiniela 2026</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- LOGIN -->
+<div id="loginModal" class="modal">
+  <div class="modal-box">
+    <h3>Login</h3>
+    <input id="loginName" placeholder="Usuario o admin">
+    <input id="loginPass" type="password" placeholder="Contraseña">
+    <button class="btn" onclick="login()">Entrar</button>
+  </div>
+</div>
+
+<header>
+  <div>Kiniela 2026</div>
+  <button class="btn-outline" onclick="logout()">Salir</button>
+</header>
+
+<div class="tabs">
+  <div class="tab active" onclick="showTab('partidos')">Partidos</div>
+  <div class="tab" onclick="showTab('pred')">Predicciones</div>
+  <div class="tab" onclick="showTab('admin')">Admin</div>
+</div>
+
+<!-- PARTIDOS -->
+<div id="partidos" class="section active">
+  <h3>Agregar partido</h3>
+  <input id="teamA" placeholder="Equipo A">
+  <input id="teamB" placeholder="Equipo B">
+  <input id="matchDate" placeholder="YYYY-MM-DD HH:MM">
+  <button class="btn" onclick="addMatch()">Agregar</button>
+
+  <div id="matches"></div>
+</div>
+
+<!-- PREDICCIONES -->
+<div id="pred" class="section">
+  <select id="predParticipant"></select>
+  <div id="predictions"></div>
+  <button class="btn" onclick="savePredictions()">Guardar</button>
+</div>
+
+<!-- ADMIN -->
+<div id="admin" class="section">
+  <h3>Admin Panel</h3>
+
+  <input id="newParticipant" placeholder="Nombre">
+  <button class="btn" onclick="addParticipant()">Agregar</button>
+
+  <br><br>
+
+  <button class="btn" onclick="lockAll()">Bloquear todo</button>
+  <button class="btn-outline" onclick="unlockAll()">Desbloquear</button>
+
+  <br><br>
+
+  <input id="newAdminPass" placeholder="Nueva contraseña admin">
+  <button class="btn" onclick="changeAdminPass()">Guardar</button>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
